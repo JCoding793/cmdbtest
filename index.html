@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-sm-7 top-level-container">
+        <!-- your widget template -->
+        <div class="main-conainer">
+          <div class="picker">
+            <sn-record-picker
+              field="name"
+              table="'cmdb_ci_business_app'"
+              display-field="'name'"
+              value-field="sys_id"
+              search-fields="'name'"
+              placeholder="Select Business Application"
+            ></sn-record-picker>
+          </div>
+
+          <div class="container">
+            <div class="row d-flex flex-row">
+              <!--DOMAIN CONTAINER-->
+              <div class="col-2">
+                <div class="domain-box">
+                  <h1 class="domain-heading">Domain</h1>
+                  <ul class="domain-containts">
+                    <div class="domain-item">
+                      <div class="color-box grey"></div>
+                      <li class="domain-item">Foundation</li>
+                    </div>
+                    <div class="domain-item d-flex flex-row">
+                      <div class="color-box blue"></div>
+                      <li class="domain-item">Design</li>
+                    </div>
+                    <div class="domain-item d-flex flex-row">
+                      <div class="color-box orange"></div>
+                      <li class="domain-item">Manage Technical Services</li>
+                    </div>
+                    <div class="domain-item d-flex flex-row">
+                      <div class="color-box green"></div>
+                      <li class="domain-item">Sell/Consume</li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+
+              <!--ARCHITECT & OWNER CONTAINER-->
+              <div class="col-2">
+                <div class="level-one-peoples-box">
+                  <div class="l-one-person-first">
+                    <div class="flex-row">
+                      <h4 class="person-name">
+                        Enterprise <br />
+                        Architect
+                      </h4>
+                      <div class="size-icons">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="l-one-person-second">
+                    <div class="flex-row">
+                      <h4 class="person-name">
+                        Application <br />
+                        Owner
+                      </h4>
+                      <div class="size-icons">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--DESIGN CONTAINER-->
+              <div class="col-3">
+                <div class="design-container">
+                  <div class="design-circle">
+                    <h1 class="circle-heading">Design</h1>
+                  </div>
+                  <div class="verticle-items-first">
+                    <div class="item-container padding-adjust-item-container">
+                      <h1 class="item-heading">
+                        Information <br />
+                        Object
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="verticle-items flex-column">
+                    <div
+                      class="item-container justify-content-start padding-adjust-item-container margin-adjust"
+                      ng-click="showPopUpRecords('Business Capability', 'busCapability')"
+                    >
+                      <div
+                        class="vr-arrow-down-work bc-to-ba-container connection-busapp-to-busser-con"
+                        ng-click="stopEvent($event)"
+                      >
+                        <div class="">
+                          <div class="connection-busapp-to-busser-vr">
+                            <div class="connection-busapp-to-busser-hr"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-row justify-content-center">
+                        <h1 class="item-heading">
+                          Business <br />
+                          Capability
+                        </h1>
+                        <h1 class="count" ng-show="bID" !="">
+                          {{busCapabilityCount}}
+                        </h1>
+                      </div>
+                      <div
+                        class="vr-arrow-down-work bc-to-ba-container"
+                        ng-click="stopEvent($event)"
+                      >
+                        <div class="hz-as-arrow req-to-bso-hz">
+                          <div class="vr-as-arrow req-to-vr bc-to-ba-vr"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="item-container justify-content-end padding-adjust-item-container margin-adjust"
+                      ng-click="showPopUpRecords('Business Application', 'busApplication')"
+                    >
+                      <div class="d-flex flex-row justify-content-center">
+                        <h1 class="item-heading">
+                          Business <br />
+                          Application
+                        </h1>
+                        <h1 class="count" ng-show="bID" !="">
+                          {{busApplicationCount}}
+                        </h1>
+                      </div>
+                      <div
+                        class="tso-horizontal-line-arrow-work-container ba-to-io-con"
+                        ng-click="stopEvent($event)"
+                      >
+                        <div class="tso-horizontal-line ba-to-io-hr">
+                          <div class="tso-vericle-line ba-to-io-vr"></div>
+                        </div>
+                      </div>
+                      <div
+                        class="vr-arrow-down-work bc-to-ba-container bs-to-as-long-con"
+                        ng-click="stopEvent($event)"
+                      >
+                        <div class="hz-as-arrow req-to-bso-hz">
+                          <div
+                            class="vr-as-arrow req-to-vr bs-to-as-long-vr"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--FOUNDATION CONTAINER-->
+              <div class="col-3">
+                <div class="design-container foundation">
+                  <div class="design-circle foundation-cicle">
+                    <h1 class="circle-heading">Foundation</h1>
+                  </div>
+                  <div
+                    class="verticle-items-foundation-one d-flex flex-column justify-content-end"
+                  >
+                    <div class="item-container item-container-foundation">
+                      <h1 class="item-heading">CMDB Group</h1>
+                    </div>
+                    <div class="item-container item-container-foundation">
+                      <h1 class="item-heading">
+                        Products <br />
+                        (Models)
+                      </h1>
+                    </div>
+                    <div class="item-container item-container-foundation">
+                      <h1 class="item-heading">Contracts</h1>
+                    </div>
+                  </div>
+                  <div class="verticle-items overlap-items-container">
+                    <div class="overlap-items-right">
+                      <div
+                        class="item-container item-container-foundation overlap-item-start"
+                      >
+                        <h1 class="item-heading overlap-items-name">Company</h1>
+                        <div
+                          class="item-container item-container-foundation overlap-item-one"
+                        >
+                          <h1 class="item-heading overlap-items-name">
+                            Business Unit
+                          </h1>
+                        </div>
+                        <div
+                          class="item-container item-container-foundation overlap-item-two"
+                        >
+                          <h1 class="item-heading overlap-items-name">
+                            Department
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="non-overlap-items-sub-container">
+                      <div
+                        class="item-container item-container-foundation overlap-item-start"
+                      >
+                        <h1 class="item-heading overlap-items-name">
+                          Location
+                        </h1>
+                      </div>
+                      <div
+                        class="item-container item-container-foundation overlap-item-start"
+                      >
+                        <h1 class="item-heading overlap-items-name">Groups</h1>
+                      </div>
+                      <div
+                        class="item-container item-container-foundation overlap-item-start"
+                      >
+                        <h1 class="item-heading overlap-items-name">Users</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--PROCESS, DATA, PRODUCT & CONTRACT PEOPLES CONTAINER-->
+              <div class="col-2">
+                <div class="level-one-peoples-box">
+                  <div class="l-one-person-first">
+                    <div class="flex-row grey-people">
+                      <div class="size-icons-last">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                      <h4 class="person-name">
+                        Process <br />
+                        Owner
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="l-one-person-first">
+                    <div class="flex-row grey-people">
+                      <div class="size-icons-last">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                      <h4 class="person-name">
+                        Data <br />
+                        Steward
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="l-one-person-first">
+                    <div class="flex-row grey-people">
+                      <div class="size-icons-last">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                      <h4 class="person-name">
+                        Product <br />
+                        Owner
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="l-one-person-first">
+                    <div class="flex-row grey-people">
+                      <div class="size-icons-last">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                      <h4 class="person-name">
+                        Contract <br />
+                        Manager
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row d-flex flex-row second-row-container">
+              <!--APPLICATION & TECHNOLOGY PEOPLES CONTAINER-->
+              <div class="col-2">
+                <div class="level-one-peoples-box alignment-mts-people">
+                  <div class="l-one-person-first">
+                    <div class="flex-row orange-colored">
+                      <h4 class="person-name">
+                        Application <br />
+                        Service Owner <br />
+                        (Application & <br />Platform)
+                      </h4>
+                      <div class="size-icons">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="l-one-person-second">
+                    <div class="flex-row orange-colored">
+                      <h4 class="person-name">
+                        Technology <br />
+                        Service Owner <br />
+                        (Infrastructure)
+                      </h4>
+                      <div class="size-icons">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="l-one-person-second">
+                    <div class="flex-row orange-colored">
+                      <h4 class="person-name">
+                        Technology <br />
+                        Service Owner <br />
+                        (Delivery)
+                      </h4>
+                      <div class="size-icons">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--MANAGE TECHNICAL SERVICES CONTAINER-->
+              <div class="col-5 mts-main-container">
+                <div
+                  class="d-flex flex-row grey-people tech-consumer-container"
+                >
+                  <div class="size-icons-last">
+                    <i class="icon fas fa-user"></i>
+                  </div>
+                  <h4 class="person-name">
+                    Technology <br />
+                    Consumer
+                  </h4>
+                  <div class="mts-b-consume-arrow-work">
+                    <div class="mts-horizontal-line">
+                      <div class="mts-verticle-line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mts-conatiner d-flex flex-row">
+                  <div class="mts-circle">
+                    <h1 class="circle-heading">
+                      Manage <br />
+                      Technical Services
+                    </h1>
+                  </div>
+                  <div class="center-circle">
+                    <div class="white-circle">
+                      <div class="circle-text">
+                        Manage <br />
+                        Portfolio
+                      </div>
+                      <i class="icon fas fa-user central-icon"></i>
+                      <div class="service-owner">Service Owner</div>
+                    </div>
+                  </div>
+                  <div
+                    class="mts-verticle-items mts-first-column d-flex flex-column"
+                  >
+                    <div class="mts-first-half justify-content-end">
+                      <div
+                        class="item-container"
+                        ng-click="showPopUpRecords('Technicle Services', 'techService')"
+                      >
+                        <div class="d-flex flex-row justify-content-center">
+                          <h1 class="item-heading">
+                            Technicle <br />
+                            Services
+                          </h1>
+                          <h1 class="count" ng-show="bID" !="">
+                            {{techServiceCount}}
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mts-second-half justify-content-end">
+                      <div
+                        class="item-container"
+                        ng-click="showPopUpRecords('Technicle Services', 'techServiceCat')"
+                      >
+                        <div class="d-flex flex-row justify-content-center">
+                          <h1 class="item-heading">
+                            Technicle <br />
+                            Services
+                          </h1>
+                          <h1 class="count" ng-show="bID" !="">
+                            {{techServiceCatCount}}
+                          </h1>
+                        </div>
+                      </div>
+                      <div
+                        class="item-container"
+                        ng-click="showPopUpRecords('Technicle Services', 'allTechService')"
+                      >
+                        <div class="d-flex flex-row justify-content-center">
+                          <h1 class="item-heading">
+                            Technicle <br />
+                            Services
+                          </h1>
+                          <h1 class="count" ng-show="bID" !="">
+                            {{allTechServiceCount}}
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mts-verticle-items d-flex flex-column">
+                    <div class="mts-first-half justify-content-end">
+                      <div
+                        class="item-container"
+                        ng-click="showPopUpRecords('Request Catalouge', 'tcReqCatalouge')"
+                      >
+                        <div class="d-flex flex-row justify-content-center">
+                          <h1 class="item-heading">
+                            Request <br />
+                            Catalouge
+                          </h1>
+                          <h1 class="count" ng-show="bID" !="">
+                            {{tcReqCatalougeCount}}
+                          </h1>
+                        </div>
+                      </div>
+                      <div
+                        class="item-container"
+                        ng-click="showPopUpRecords('Technicle Services Offering', 'tsOffering')"
+                      >
+                        <div class="d-flex flex-row justify-content-center">
+                          <h1 class="item-heading">
+                            Technicle <br />
+                            Services Offering
+                          </h1>
+                          <h1 class="count" ng-show="bID" !="">
+                            {{tsOfferingCount}}
+                          </h1>
+                        </div>
+                        <div
+                          class="mts-b-consume-arrow-work tso-back-verticle tso-verticle-portion tso-v-line-left"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div
+                            class="mts-horizontal-line tso-back-horizontal tso-verticle-portion-horizontal"
+                          >
+                            <div
+                              class="tso-verticle-portion-verticle tso-v-line-left"
+                            ></div>
+                          </div>
+                        </div>
+                        <div
+                          class="mts-b-consume-arrow-work tso-back-verticle tso-verticle-portion"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div
+                            class="mts-horizontal-line tso-back-horizontal tso-verticle-portion-horizontal"
+                          >
+                            <div class="tso-verticle-portion-verticle"></div>
+                          </div>
+                        </div>
+                        <div
+                          class="mts-b-consume-arrow-work tso-back-verticle"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div class="mts-horizontal-line tso-back-horizontal">
+                            <div
+                              class="mts-verticle-line tso-back-verticle"
+                            ></div>
+                          </div>
+                        </div>
+                        <div
+                          class="tso-horizontal-line-arrow-work-container"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div class="tso-horizontal-line">
+                            <div class="tso-vericle-line"></div>
+                          </div>
+                        </div>
+                        <div
+                          class="tso-hz-long-container"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div class="tso-hz-long">
+                            <div class="tso-ver-long"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mts-second-half justify-content-end">
+                      <div
+                        class="item-container"
+                        ng-click="showPopUpRecords('Technicle Services Offering', 'tsOfferingCat')"
+                      >
+                        <div class="d-flex flex-row justify-content-center">
+                          <h1 class="item-heading">
+                            Technicle <br />
+                            Services Offering
+                          </h1>
+                          <h1 class="count" ng-show="bID" !="">
+                            {{tsOfferingCatCount}}
+                          </h1>
+                        </div>
+                        <div
+                          class="tso-horizontal-line-arrow-work-container tso-hr-two"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div class="tso-horizontal-line">
+                            <div class="tso-vericle-line"></div>
+                          </div>
+                        </div>
+                        <div
+                          class="tso-hz-long-container tso-sub-con"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div class="tso-hz-long tso-sub-hz-long">
+                            <div class="tso-ver-long"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="item-container"
+                        ng-click="showPopUpRecords('Technicle Services Offering', 'allTsOffering')"
+                      >
+                        <div class="d-flex flex-row justify-content-center">
+                          <h1 class="item-heading">
+                            Technicle <br />
+                            Services Offering
+                          </h1>
+                          <h1 class="count" ng-show="bID" !="">
+                            {{allTsOfferingCount}}
+                          </h1>
+                        </div>
+                        <div
+                          class="tso-horizontal-line-arrow-work-container tso-hr-three"
+                        >
+                          <div class="tso-horizontal-line">
+                            <div class="tso-vericle-line"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mts-verticle-items d-flex flex-column mts-dynamic-ci"
+                  >
+                    <div class="item-container justify-content-end">
+                      <h1 class="item-heading">
+                        Dynamic CI <br />
+                        Group
+                      </h1>
+                      <div class="tso-hz-long-container tso-sub-con dyci-con">
+                        <div class="tso-hz-long dyci-con-hz-long">
+                          <div class="tso-ver-long"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mts-verticle-items d-flex flex-column">
+                    <div class="mts-first-half d-flex flex-column">
+                      <div
+                        class="item-container justify-content-end app-services-item"
+                        ng-click="showPopUpRecords('Application Services', 'appServices')"
+                      >
+                        <div class="d-flex flex-row justify-content-center">
+                          <h1 class="item-heading">
+                            Application <br />
+                            Services
+                          </h1>
+                          <h1 class="count" ng-show="bID" !="">
+                            {{appServicesCount}}
+                          </h1>
+                        </div>
+                        <div
+                          class="vr-arrow-down-work"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div class="hz-as-arrow">
+                            <div class="vr-as-arrow"></div>
+                          </div>
+                        </div>
+                        <div
+                          class="tso-horizontal-line-arrow-work-container bso-as-con"
+                          ng-click="stopEvent($event)"
+                        >
+                          <div class="tso-horizontal-line bso-as-hr">
+                            <div class="tso-vericle-line bso-as-vr"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mts-second-half">
+                      <div
+                        class="verticle-items overlap-items-container mts-overlap-items-container"
+                      >
+                        <div class="overlap-items-left">
+                          <div
+                            class="item-container item-container-foundation mts-overlap-item-start"
+                            ng-click="showPopUpRecords('Application Services', 'appServices')"
+                          >
+                            <div class="d-flex flex-row justify-content-center">
+                              <h1 class="item-heading overlap-items-name">
+                                Application
+                              </h1>
+                              <h1 class="count" ng-show="bID" !="">
+                                {{appServicesCount}}
+                              </h1>
+                            </div>
+                            <div
+                              class="item-container item-container-foundation overlap-item-one mts-overlap-item-one"
+                            >
+                              <div
+                                class="d-flex flex-row justify-content-center"
+                              >
+                                <h1 class="item-heading overlap-items-name">
+                                  Server
+                                </h1>
+                                <h1 class="count" ng-show="bID" !="">
+                                  {{appServicesCount}}
+                                </h1>
+                              </div>
+                            </div>
+                            <div
+                              class="item-container item-container-foundation overlap-item-two mts-overlap-item-two"
+                            >
+                              <div
+                                class="d-flex flex-row justify-content-center"
+                              >
+                                <h1 class="item-heading overlap-items-name">
+                                  IOT
+                                </h1>
+                                <h1 class="count" ng-show="bID" !="">
+                                  {{appServicesCount}}
+                                </h1>
+                              </div>
+                            </div>
+                            <div
+                              class="item-container item-container-foundation mts-overlap-item-three"
+                            >
+                              <div
+                                class="d-flex flex-row justify-content-center"
+                              >
+                                <h1 class="item-heading overlap-items-name">
+                                  Network Gear
+                                </h1>
+                                <h1 class="count" ng-show="bID" !="">
+                                  {{appServicesCount}}
+                                </h1>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--SELL/CONSUME CONTAINER-->
+              <div class="col-3 sell-consume-main-container">
+                <div class="d-flex flex-row b-consumer-container">
+                  <h4 class="person-name">
+                    Business <br />
+                    Consumer
+                  </h4>
+                  <div class="size-icons">
+                    <i class="icon fas fa-user"></i>
+                  </div>
+                  <div class="b-consume-arrow-work">
+                    <div class="horizontal-line">
+                      <div class="verticle-line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="design-container sell-consume">
+                  <div class="design-circle sell-consume-circle">
+                    <h1 class="circle-heading">Sell/Consume</h1>
+                  </div>
+                  <div class="verticle-items-first-sc">
+                    <div class="item-container margin-bottom-adjust">
+                      <h1 class="item-heading">
+                        Request <br />
+                        Catalogue
+                      </h1>
+                      <div class="vr-arrow-down-work req-to-bso-container">
+                        <div class="hz-as-arrow req-to-bso-hz">
+                          <div class="vr-as-arrow req-to-vr"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-container">
+                      <h1 class="item-heading">
+                        Business Service <br />
+                        Offering
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="verticle-items flex-column">
+                    <div
+                      class="item-container margin-adjust margin-bottom-adjust"
+                    >
+                      <h1 class="item-heading">
+                        Service <br />
+                        Portfolio
+                      </h1>
+                      <div class="vr-arrow-down-work bs-to-sp-container">
+                        <div class="hz-as-arrow req-to-bso-hz">
+                          <div class="req-to-vr bs-to-sp-vr"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-container margin-adjust">
+                      <h1 class="item-heading">
+                        Business <br />
+                        Service
+                      </h1>
+                      <div
+                        class="tso-horizontal-line-arrow-work-container bso-to-bs-con"
+                      >
+                        <div class="bso-to-bs-hr">
+                          <div class="bso-to-bs-vr"></div>
+                        </div>
+                      </div>
+                      <div
+                        class="tso-horizontal-line-arrow-work-container busapp-to-busser-con"
+                      >
+                        <div class="tso-horizontal-line busapp-to-busser-hr">
+                          <div
+                            class="tso-vericle-line busapp-to-busser-vr"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--BUSINESS RELATIONSHIP & CUSTOMER SERVICE PROPLES CONTAINER-->
+              <div class="col-2">
+                <div class="level-one-peoples-box">
+                  <div class="l-one-person-first">
+                    <div class="flex-row green-people">
+                      <div class="size-icons-last">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                      <h4 class="person-name">
+                        Business <br />
+                        Relationship <br />
+                        Manager
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="l-one-person-first">
+                    <div class="flex-row green-people">
+                      <div class="size-icons-last">
+                        <i class="icon fas fa-user"></i>
+                      </div>
+                      <h4 class="person-name csm">
+                        Customer <br />
+                        Service <br />
+                        Manager
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <!---  <div class='row'>
+          <div class="col-sm-5">
+            <span class='pull-right'>
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">State:&nbsp;
+                {{stateLabel}}
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li ng-repeat="choice in data.stateChoices" value="{{choice.value}}"
+                    ng-click='stateFilter(choice.value,choice.label)'>
+                  <a href="javascript:void(0)">{{choice.label}}</a>
+                </li>
+              </ul>
+            </span>
+          </div>
+          <div class="col-sm-5">  
+            <sn-record-picker  field="c.approval_for" id="approval_for"
+                              table="'sc_req_item'" default-query="''" display-field="'number'"
+                              display-fields="'name,item'" value-field="'sys_id'" search-fields="'number'" page-size="100"
+                              placeholder="Select Requested Item"></sn-record-picker>
+          </div>
+          <div class="col-sm-2"> 
+            <button class='btn btn-primary btn-block' ng-click='searchFunction(Selectedvalue)'>
+              Search
+            </button>
+          </div>
+        </div> --------->
+
+        <!------TABLE TO SHOW APPROVAL RECORDS------->
+        <table class="table table-striped">
+          <thead class="fixed-listheader">
+            <tr>
+              <th scope="col" colspan="2">${State}</th>
+              <th scope="col" colspan="4">${Approver}</th>
+              <th scope="col" colspan="2">${Approval For}</th>
+              <th scope="col" colspan="1" class="text-center">${Action}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-if="loading">
+              <td colspan="9" style="text-align: center">
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">${Loading...}</span>
+              </td>
+            </tr>
+            <tr
+              ng-repeat="item in data.tableRecord | orderBy:approver"
+              ng-if="!loading"
+            >
+              <td
+                headers="id-header-description id-item-{{item.state}}"
+                class="catalog-text-wrap"
+                colspan="2"
+              >
+                {{::item.state}}
+              </td>
+              <td
+                headers="id-header-description id-item-{{item.approver}}"
+                class="catalog-text-wrap"
+                colspan="4"
+              >
+                {{::item.approver}}
+              </td>
+              <td
+                headers="id-header-description id-item-{{item.approving}}"
+                class="catalog-text-wrap"
+                colspan="2"
+              >
+                {{::item.approving}}
+              </td>
+              <td
+                headers="id-header-description id-item-{{item.sys_id}}"
+                class="catalog-text-wrap text-center"
+                colspan="1"
+              >
+                <a href="{{::item.link}}" target="_blank" class="text-center">
+                  <i
+                    class="fa fa-external-link"
+                    aria-hidden="true"
+                    title="Open in new tab"
+                    data-toggle="tooltip"
+                  ></i
+                ></a>
+              </td>
+            </tr>
+            <tr ng-if="displayData.length==0">
+              <td colspan="9" class="text-center">No Records</td>
+            </tr>
+          </tbody>
+        </table>
+        <div
+          class="pagination_container text-center"
+          ng-if="data.countRecord > data.limit && !loading"
+        >
+          <div class="text-a-c">
+            Showing {{data.limit}} of {{data.countRecord}}
+          </div>
+          <button
+            class="m-t-xs btn btn-default btn-loadmore"
+            ng-click="pageChange()"
+          >
+            ${Show More Items}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--- my code --->
+    <!----<div class="col-3">
+    <div class="design-container">
+      <div class="design-circle" ng-click="c.designOnClick()">
+        <h1 class="circle-heading">
+          Design
+        </h1>
+      </div>
+      <div class="verticle-items-first">
+        <div class="item-container padding-adjust-item-container">
+          <h1 class="item-heading">
+            Information <br/> Object
+          </h1>
+        </div>
+      </div>
+      <div class="verticle-items flex-column">
+        <div class="item-container justify-content-start padding-adjust-item-container margin-adjust" ng-click="showPopUpRecords('Business Capability', 'busCapability')">
+          <div class="vr-arrow-down-work bc-to-ba-container connection-busapp-to-busser-con" ng-click="stopEvent($event)">
+            <div class="">
+              <div class="connection-busapp-to-busser-vr">
+                <div class="connection-busapp-to-busser-hr"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row justify-content-center">
+            <h1 class="item-heading">
+              Business <br/> Capability
+            </h1>
+            <h1 class="count" ng-show= bID != "">{{busCapabilityCount}}</h1>
+          </div>
+          <div class="vr-arrow-down-work bc-to-ba-container" ng-click="stopEvent($event)">
+            <div class="hz-as-arrow req-to-bso-hz">
+              <div class="vr-as-arrow req-to-vr bc-to-ba-vr">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item-container justify-content-end padding-adjust-item-container margin-adjust" ng-click="showPopUpRecords('Business Application', 'busApplication')">
+          <div class="d-flex flex-row justify-content-center">
+            <h1 class="item-heading">
+              Business <br/> Application
+            </h1>
+            <h1 class="count" ng-show= bID != "">{{busApplicationCount}}</h1>
+          </div>
+          <div class="tso-horizontal-line-arrow-work-container ba-to-io-con" ng-click="stopEvent($event)">
+            <div class="tso-horizontal-line ba-to-io-hr">
+              <div class="tso-vericle-line ba-to-io-vr">
+              </div>
+            </div>
+          </div>
+          <div class="vr-arrow-down-work bc-to-ba-container bs-to-as-long-con" ng-click="stopEvent($event)">
+            <div class="hz-as-arrow req-to-bso-hz">
+              <div class="vr-as-arrow req-to-vr bs-to-as-long-vr">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+  
+    <div class="panel panel-default" ng-repeat="a in data.tablesFetchRecords">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{a[0]}}" aria-expanded="true" aria-controls="collapseOne">
+            <i class="more-less glyphicon glyphicon-plus"></i>
+            {{a[0].split("_").join(" ").toUpperCase()}}
+          </a>
+        </h4>
+      </div>
+      <div id="{{a[0]}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <table class="table table-bordered table-hover specialCollapse">
+            <thead>
+              <tr>
+                <th ng-repeat="(key , value) in a[1]">{{key.split("_").join(" ").toUpperCase()}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="o in a">
+                <td ng-repeat="d in o">{{ d }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+  </div>--->
+
+    <!---<div >
+    <div ng-repeat="a in data.tablesFetchRecords">
+      <div class="panel panel-info">
+        <div class="panel-heading bg-secondary">{{a[0].split("_").join(" ").toUpperCase()}}</div>
+        <div class="panel-body">
+          <table class="table table-bordered table-hover specialCollapse">
+            <thead>
+              <tr>
+                <th ng-repeat="(key , value) in a[1]">{{key.split("_").join(" ").toUpperCase()}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="o in a">
+                <td ng-repeat="d in o">{{ d }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>--->
+  </body>
+</html>

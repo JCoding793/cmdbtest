@@ -1,0 +1,822 @@
+.top-level-container {
+    max-width: 750px;
+    overflow-x:scroll;
+    /* border-right: 4px double red; */
+    position: relative;
+    z-index: 1;
+    padding: 30px 0px 30px 0px;
+  }
+  
+  .domain-box {
+    padding: 5px 20px 5px 0px;
+    border: 0px solid black;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    min-width: 250px;
+  }
+  
+  .domain-heading {
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .domain-containts {
+  
+  }
+  
+  .color-box {
+    min-width: 30px;
+    height: 15px;
+    margin: 5px 10px 0px 10px;
+  }
+  
+  .grey {
+    background-color: #BDBDBD;
+  }
+  
+  .blue {
+    background-color: #6497b1;
+  }
+  
+  .orange {
+    background-color: orange;
+  }
+  
+  .green {
+    background-color: #8ABD53;
+  }
+  
+  .domain-item {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .level-one-peoples-box {
+    margin: 25px;
+  }
+  
+  .l-one-person-first,
+  .l-one-person-second {
+    color: #6497b1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .l-one-person-first {
+    justify-content: flex-start;
+  }
+  
+  .l-one-person-second {
+    justify-content: flex-end;
+  }
+  
+  .person-name {
+    font-weight: bold;
+    font-family: "Roboto";
+    font-size: 14px;
+  }
+  
+  .size-icons {
+    font-size: 32px;
+    margin-left: auto;
+    margin-top: auto;
+  }
+  
+  .size-icons-last {
+    font-size: 32px;
+    margin-right: 10px;
+    margin-top: auto;
+    padding-right: 10px;
+  }
+  
+  .design-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -30%);
+    background-color: white;
+    min-width: 80px;
+    min-height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .circle-heading {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .design-container {
+    position: relative;
+    padding: 15px 20px 15px 20px;
+    background-color: #6497b1;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 235px;
+  }
+  
+  .verticle-items-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+  }
+  
+  .item-container {
+    padding: 8px;
+    border:1px solid #2A2727;
+    background-color: white;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    margin: 25px 5px 25px 5px; 
+    width: 120px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .item-heading {
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #2A3D13;
+  }
+  
+  .foundation {
+    background-color: #BDBDBD;
+    margin-left: 40px;
+    padding: 15px;
+  }
+  
+  .foundation-cicle {
+    left: 95%;
+    min-width: 80px;
+    min-height: 80px;
+  }
+  
+  .item-container-foundation {
+    margin: 5px 15px 0px 15px;
+  }
+  
+  .verticle-items-foundation-one{
+    disply: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+ /*OVERLAP ITEMS */
+  
+  .overlap-items-container {
+    padding: 5px 20px 15px 0px;
+    background-color: #fcf7f8;
+  }
+  
+  .overlap-item-box {
+    padding: 2px 2px 2px 2px;
+    border:1px solid 2A2727;
+    background-color: white;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .overlap-items-name {
+    font-size: 10px;
+  }
+  
+  .overlap-item-start {
+    width: 100px;
+    height: 30px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  
+  .overlap-item-one {
+    position: absolute;
+    transform: translate(-10%, 80%);
+    width: 100px;
+    height: 30px;
+  }
+  
+  .overlap-item-two {
+    position: absolute;
+    transform: translate(0%, 160%);
+    width: 100px;
+    height: 30px;
+  }
+  
+  .non-overlap-items-sub-container {
+    margin-top: 60px;
+  }
+  
+  .grey-people {
+    color: #BDBDBD;
+  }
+  
+ /* ROW SECOND STARTS */
+  
+  .second-row-container {
+    margin-top: 45px;
+  }
+  
+  .alignment-mts-people {
+    margin-top: 75px;
+    margin-left: -25px;
+  }
+  
+  .orange-colored {
+    color: orange;
+  }
+  
+  .tech-consumer-container {
+    position: absolute;
+    z-index: 10;
+    left: 10%;
+    top: -14%;
+    color: black;
+  }
+  
+  .mts-b-consume-arrow-work {
+    position: absolute;
+    z-index: 20;
+    left: 105%;
+    top: 45%;
+  }
+  
+  .mts-horizontal-line {
+    width: 10px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .mts-verticle-line {
+    position: absolute;
+    left: 100%;
+    width: 1px;
+    height: 62px;
+    background-color: black;
+  }
+  
+  .mts-verticle-line::after {
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: -4px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+  }
+  
+  .tso-back-verticle {
+    position: absolute;
+    z-index: 9;
+    left: 40%;
+    top: 36%;
+  }
+  
+  .tso-back-horizontal {
+    width: 0;
+  }
+  
+  .tso-back-verticle {
+    height: 50px;
+  }
+  
+  .tso-back-verticle::after {
+    top: 41px;
+  }
+  
+  .tso-verticle-portion {
+    top: 23%;
+  }
+  
+  .tso-verticle-portion-verticle {
+    position: absolute;
+    left: 40%;
+    width: 1px;
+    height: 25px;
+    background-color: black;
+  }
+  
+  .tso-v-line-left {
+    left: 36%;
+  }
+  
+  .tso-v-line-left::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -4px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+  }
+  
+  .tso-horizontal-line-arrow-work-container{
+    position: absolute;
+    z-index: 20;
+    left: 21%;
+    top: 35%;
+  }
+  
+  .tso-hr-two {
+    top: 61%;
+  }
+  
+  .tso-hr-three {
+    top: 80%;
+  }
+  
+  .tso-horizontal-line {
+    width: 15px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .tso-horizontal-line::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -2px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid black;
+  
+  }
+  
+  .tso-vericle-line {
+    position: absolute;
+    left: 100%;
+    width: 15px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .tso-hz-long-container {
+    position: absolute;
+    z-index: 20;
+    left: 46%;
+    top: 35%;
+  }
+  
+  .tso-hz-long {
+    width: 178px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .tso-ver-long {
+    position: absolute;
+    left: 100%;
+    width: 1px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .tso-ver-long::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -800%;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid black;
+  }
+  
+  .tso-sub-con {
+    top: 61%;
+  }
+  
+  .tso-sub-hz-long {
+    width: 27px;
+  }
+  
+  .dyci-con {
+    left: 71%;
+  }
+  
+  .dyci-con-hz-long {
+    width: 22px;
+  }
+  
+  .mts-main-container {
+    position: relative;
+    z-index: 0;
+  }
+  
+  .vr-arrow-down-work {
+    position: absolute;
+    z-index: 20;
+    right: 14%;
+    top: 42%;
+  }
+  
+  .hz-as-arrow {
+    width: 0px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .vr-as-arrow {
+    position: absolute;
+    left: 100%;
+    width: 1px;
+    height: 12px;
+    background-color: black;
+  }
+  
+  .vr-as-arrow::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -4px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+  }
+  
+  .req-to-bso-container {
+    right:70%;
+    top: 28%;
+  }
+  
+  .req-to-vr {
+    height: 30px;
+  }
+  
+  .bs-to-sp-container {
+    right:30%;
+    top: 32%;
+  }
+  
+  .bs-to-sp-vr {
+    position: absolute;
+    left: 100%;
+    width: 1px;
+    background-color: black;
+  }
+  
+  .bs-to-sp-vr::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjust this value to position the arrow */
+    left: -4px; /* Adjust this value to position the arrow horizontally */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid black; /* Change to bottom border */
+  }
+  
+  .bc-to-ba-container {
+    right:28%;
+    top: 34%;
+  }
+  
+  .bc-to-ba-vr {
+    height: 39px;
+  }
+  
+  .bs-to-as-long-con {
+    top: 72%;
+  }
+  
+  .bs-to-as-long-vr {
+    height: 225px;
+  }
+  
+  .ba-to-io-con {
+    left: 48%;
+    top: 65%; 
+  }
+  
+  .ba-to-io-hr {
+    width: 2px;
+  }
+  
+  .bso-as-con {
+    top: 35%;
+    left: 96%;
+  }
+  
+  .bso-as-hr {
+    width: 90px;
+  }
+  
+  .bso-to-bs-con {
+    left: 47%;
+    top: 52%;
+  }
+  
+  .bso-to-bs-hr {
+      width: 10px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .bso-to-bs-vr {
+    position: absolute;
+    left: 100%;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .bso-to-bs-vr::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px; /* Adjust this value to position the arrow */
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid black;
+  }
+  
+  .busapp-to-busser-con {
+      left: 90%;
+    top: 52%;
+  }
+  
+  .busapp-to-busser-hr {
+      width: 30px;
+  }
+  
+  .busapp-to-busser-vr {
+      position: absolute;
+    left: 100%;
+    bottom: 0;
+    width: 1px;
+    height: 452px;
+    background-color: black;
+  }
+  
+  .connection-busapp-to-busser-con {
+      top: -13%;
+  }
+  
+  .connection-busapp-to-busser-hr {
+      position: absolute;
+    top: 0; /* Position at the top of the vertical line */
+    left: 0;
+    width: 458px; /* Example width */
+    height: 1px; /* Example height */
+    background-color: black
+  }
+  
+  .connection-busapp-to-busser-vr {
+    position: absolute;
+    left: 100%;
+    width: 1px;
+    height: 71px;
+    background-color: black;
+  }
+  
+  .mts-conatiner {
+    position: relative;
+    padding: 15px 10px 15px 0px;
+    background-color: orange;
+    border-radius: 35px;
+    height: 350px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left:-20px;
+  }
+  
+  .mts-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -30%);
+    background-color: white;
+    min-width: 130px;
+    min-height: 130px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .mts-first-column {
+    margin-top: 65px;
+  }
+  
+  .mts-dynamic-ci {
+    disply: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 75px;
+  }
+  
+  .app-services-item {
+    margin-top: 90px;
+  }
+  
+  .mts-overlap-items-container {
+    height: 130px;
+    padding: 5px 5px 15px 35px;
+  }
+  
+ 
+  
+  .mts-overlap-item-start {
+    width: 100px;
+    height: 30px;
+    margin: 1px 0 1px 0;;
+  }
+  
+  .mts-overlap-item-one {
+    transform: translate(-20%, 70%);
+    margin: 0;
+  }
+  
+  .mts-overlap-item-two{
+    transform: translate(-30%, 150%);
+    margin: 0;
+  }
+  
+  .mts-overlap-item-three {
+    position: absolute;
+    transform: translate(-50%, 230%);
+    width: 100px;
+    height: 30px;
+    margin: 0;
+    margin-left: 10px;
+  
+  }
+  
+  .sell-consume-main-container {
+    position: relative;
+    z-index: -1;
+  }
+  
+  .b-consumer-container {
+    position: absolute;
+    z-index: 10;
+    color: black;
+    top:-14%;
+    right:20%;
+  }
+  
+  .b-consumer-container h4 {
+    margin-right:15px;
+  }
+  
+  .b-consume-arrow-work {
+    position: absolute;
+    z-index: 20;
+    right: 110%;
+    top: 45%;
+  }
+  
+  .horizontal-line {
+    width: 45px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .verticle-line {
+    width: 1px;
+    height: 40px;
+    background-color: black;
+  }
+  
+  .verticle-line::after {
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: -4px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+  }
+  
+  .sell-consume {
+    background-color: #8ABD53;
+    margin-left: 40px;
+    padding: 0px 35px 35px 35px;;
+  }
+  
+  .sell-consume-circle {
+    left: 95%;
+    top: 85%;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  
+  .verticle-items-first-sc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+  
+  .green-people {
+    color: #8ABD53;
+  }
+  
+  .center-circle {
+    position: absolute;
+    z-index: 2;
+    top:-10%;
+    left: 103%;
+    transform: translate(-50%, -50%);
+    transform-origin: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .white-circle {
+    min-width: 160px;
+    min-height: 160px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .circle-text {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Roboto";
+  }
+  
+  .central-icon {
+    color: #6497b1;
+    font-size: 50px;
+  }
+  
+  .service-owner {
+    margin-top: 5px;
+    font-family: "Roboto";
+  }
+  
+ /*	RECORD PICKER */
+  .picker {
+      width: 300px;
+    margin-bottom: 60px;
+  }
+  
+ /*Count */
+  .count {
+      font-size: 16px;
+    color: #2A3D13;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  
+  
+  
+  /*/*///// KEEP AS LAST FOR THE OVERRIDE//////////// */
+  .padding-adjust-item-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .margin-adjust {
+    margin-left: 15px;
+  }
+  
+  .margin-bottom-adjust {
+    margin-bottom: 15px;
+  }
+  
+  .hz-as-arrow-adjust-left-margin {
+      margin-left: 100px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
